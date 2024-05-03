@@ -1,0 +1,106 @@
+root@scriptbox:/opt/pyscripts# pip install fabric
+
+root@scriptbox:/opt/pyscripts# wget https://bootstrap.pypa.io/get-pip.py
+root@scriptbox:/opt/pyscripts# ls
+root@scriptbox:/opt/pyscripts# apt install python
+root@scriptbox:/opt/pyscripts# ls
+root@scriptbox:/opt/pyscripts# python get-pip.py
+root@scriptbox:/opt/pyscripts# wget  https://bootstrap.pypa.io/pip/2.7/get-pip.py
+root@scriptbox:/opt/pyscripts# ls
+root@scriptbox:/opt/pyscripts# apt install python
+root@scriptbox:/opt/pyscripts# ls
+root@scriptbox:/opt/pyscripts# python get-pip.py.1
+
+root@scriptbox:/opt/pyscripts# pip install python-jenkins
+root@scriptbox:/opt/pyscripts# pip install 'fabric<2.0'
+root@scriptbox:/opt/pyscripts# mkdir fabric
+root@scriptbox:/opt/pyscripts# cd fabric/
+root@scriptbox:/opt/pyscripts/fabric# vim fabfile.py
+root@scriptbox:/opt/pyscripts/fabric# fab -l
+root@scriptbox:/opt/pyscripts/fabric# fab greeting:Evening
+root@scriptbox:/opt/pyscripts/fabric# vim fabfile.py
+root@scriptbox:/opt/pyscripts/fabric# fab -l
+root@scriptbox:/opt/pyscripts/fabric# fab system_info
+root@scriptbox:/opt/pyscripts/fabric# vim fabfile.py
+root@scriptbox:/opt/pyscripts/fabric# fab -l
+root@scriptbox:/opt/pyscripts/fabric# fab remote_exec
+
+
+cd /c/vagrant-vms/Python_Linux/
+$ vagrant ssh web01
+
+[vagrant@web01 ~]$ useradd devops
+[vagrant@web01 ~]$ sudo -i
+[root@web01 ~]# useradd devops
+
+$ vagrant ssh web02
+
+[vagrant@web02 ~]$ sudo -i
+[root@web02 ~]# useradd devops
+[root@web02 ~]# passwd devops
+[root@web02 ~]# visudo
+[root@web02 ~]# vi /etc/ssh/sshd_config
+[root@web02 ~]# systemctl restart sshd
+[root@web02 ~]# logout
+[vagrant@web02 ~]$ logout
+
+$ vagrant ssh scriptbox
+
+vagrant@scriptbox:~$ ssh devops@192.168.10.3
+[devops@web01 ~]$ sudo -i
+[root@web01 ~]# logout
+[devops@web01 ~]$ logout
+vagrant@scriptbox:~$ ssh devops@192.168.10.3
+[devops@web01 ~]$ sudo -i
+[root@web01 ~]# logout
+[devops@web01 ~]$ logout
+
+vagrant@scriptbox:~$ ssh-keygen
+
+vagrant@scriptbox:~$ ssh-copy-id devops@192.168.10.3
+
+
+vagrant@scriptbox:~$ ssh-copy-id devops@192.168.10.4
+
+
+vagrant@scriptbox:~$ ssh devops@192.168.10.3
+[devops@web01 ~]$ logout
+vagrant@scriptbox:~$ ls
+vagrant@scriptbox:~$ sudo -i
+root@scriptbox:~# ssh-keygen
+
+root@scriptbox:~# ssh-copy-id devops@192.168.10.3
+
+
+root@scriptbox:~# cd /opt/
+root@scriptbox:/opt# ls
+
+root@scriptbox:/opt# cd pyscripts/
+root@scriptbox:/opt/pyscripts# ls
+
+root@scriptbox:/opt/pyscripts# cd fabric/
+root@scriptbox:/opt/pyscripts/fabric# ls
+
+root@scriptbox:/opt/pyscripts/fabric# fab -l
+
+root@scriptbox:/opt/pyscripts/fabric# fab -H 192.168.10.3 -u devops remote_exec /usr/local/lib/python2.7/dist-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+
+root@scriptbox:/opt/pyscripts/fabric# vim fabfile.py
+root@scriptbox:/opt/pyscripts/fabric# fab -H 192.168.10.3 -u devops remote_exec
+
+root@scriptbox:/opt/pyscripts/fabric# fab -H 192.168.10.3,192.168.10.4 -u devops web_setup:https://www.tooplate.com/zip-templates/2121_wave_cafe.zip,2121_wave_cafe
+
+root@scriptbox:/opt/pyscripts/fabric# cd
+root@scriptbox:~# pip install virtualenv
+root@scriptbox:~# ls
+root@scriptbox:~# cd automation-env/
+root@scriptbox:~/automation-env# ls
+root@scriptbox:~/automation-env# source bin/activate
+(automation-env) root@scriptbox:~/automation-env# pip install jenkinsapi
+(automation-env) root@scriptbox:~/automation-env# deactivate
+root@scriptbox:~/automation-env# cd
+root@scriptbox:~# logout
+vagrant@scriptbox:~$ logout
+
+Caplogy_Data_002@LAPTOP-ROOUAE14 MINGW64 /c/vagrant-vms/Python_Linux
+$

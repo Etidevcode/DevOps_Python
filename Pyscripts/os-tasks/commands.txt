@@ -1,0 +1,56 @@
+$ cd Python_Linux/
+
+$ ls
+Vagrantfile
+
+$ cat Vagrantfile  
+
+$ vagrant up
+
+$ vagrant ssh scriptbox
+
+vagrant@scriptbox:~$ sudo -i
+root@scriptbox:~# mkdir /opt/pyscripts
+root@scriptbox:~# cd /opt/pyscripts/
+root@scriptbox:/opt/pyscripts# mkdir ostaks
+root@scriptbox:/opt/pyscripts# python
+root@scriptbox:/opt/pyscripts# python3
+
+>>> import os
+>>> os.system("ls")
+>>> os.system("lsss")
+>>> dir(os)
+>>> exit()
+
+root@scriptbox:/opt/pyscripts# vim check-file.py
+root@scriptbox:/opt/pyscripts# ls -l /usr/bin/python3
+root@scriptbox:/opt/pyscripts# ls -l /usr/bin/python
+root@scriptbox:/opt/pyscripts# chmod +x check-file.py
+root@scriptbox:/opt/pyscripts# ./check-file.py
+root@scriptbox:/opt/pyscripts# cat check-file.py
+root@scriptbox:/opt/pyscripts# touch /tmp/testfile.txt
+root@scriptbox:/opt/pyscripts# ./check-file.py
+root@scriptbox:/opt/pyscripts# vim ostasks.py
+root@scriptbox:/opt/pyscripts# python3
+
+>>> import os
+>>> user = "alpha"
+>>> os.system("id {}".format(user))
+>>> ec = os.system("id {}".format(user))
+>>> print(ec)
+>>> exit()
+
+root@scriptbox:/opt/pyscripts# vim ostasks.py
+root@scriptbox:/opt/pyscripts# chmod +x ostasks.py
+root@scriptbox:/opt/pyscripts# ./ostasks.py
+
+
+root@scriptbox:/opt/pyscripts# ./ostasks.py
+root@scriptbox:/opt/pyscripts# vim ostasks.py
+root@scriptbox:/opt/pyscripts# ./ostasks.py
+root@scriptbox:/opt/pyscripts# ./ostasks.py
+root@scriptbox:/opt/pyscripts# vim ostasks.py
+root@scriptbox:/opt/pyscripts# id alpha
+root@scriptbox:/opt/pyscripts# ./ostasks.py
+Adding users to system
+root@scriptbox:/opt/pyscripts# ls -ld /opt/science_dir/
